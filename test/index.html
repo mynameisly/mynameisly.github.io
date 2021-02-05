@@ -138,13 +138,14 @@
       closeBtn.onclick = function() {
         mask.removeChild(videobox);
         mask.removeChild(closeBtn);
+        mask.removeChild(enterBtn);
         mask.className = '';//删除mask样式
       }
 
       // 添加进入按钮
       var enterBtn = document.createElement('div');
       enterBtn.id = 'enter';
-      videobox.appendChild(enterBtn);
+      mask.appendChild(enterBtn);
       enterBtn.innerHTML = '进入';
       enterBtn.className = 'enterBtn';
       
