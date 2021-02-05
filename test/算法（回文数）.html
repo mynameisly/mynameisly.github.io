@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>算法（回文数）</title>
+
+</head>
+<body>
+  <script>
+// 给你一个整数 x ，如果 x 是一个回文整数，返回 ture ；否则，返回 false 。
+
+// 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。
+    var isPalindrome = function (x) {
+      if (x < 0) return false;
+      let str = x.toString();
+      
+      let font = '';
+      let back = '';
+      let reverseBack = '';
+      if(str.length % 2 == 0) {
+        // 偶数
+        font = str.slice(0,str.length / 2);
+        back = str.slice((str.length / 2));
+        reverseBack = back.split('').reverse().join('');
+        if(font == reverseBack) {
+          return true;
+        } else{
+          return false;
+        }
+      }else{
+        // 奇数
+        if (str.length == 1) return true;
+        let center = Math.floor(str.length / 2);
+        font = str.slice(0, center);
+        back = str.slice(center+1);
+        reverseBack = back.split('').reverse().join('');
+        if (font == reverseBack) {
+          return true
+        }else{
+          return false
+        }
+      }
+    };
+    // console.log(isPalindrome(1001))
+
+    // =============================================================
+
+    let otherAnswer = function(x) {
+      return Number(`${Math.abs(x)}`.split('').reverse().join('')) == x 
+    }
+    console.log(otherAnswer(100))
+  </script>
+</body>
+</html>
