@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>基于VUE步骤进度条样式代码 - 站长素材</title>
+<link rel="stylesheet" href="https://demosc.chinaz.net/Files/DownLoad/webjs1/201712/jiaoben5564/css/element.min.css" />
+</head>
+<body>
+<div id="myVue">
+	<!-- <h2>收集几款步骤条，基于element-ui</h2>
+	<h3>1.简单的步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal1}}</p>
+	<el-steps :active="stepVal1" finish-status="success">
+	  <el-step title="步骤 1"></el-step>
+	  <el-step title="步骤 2"></el-step>
+	  <el-step title="步骤 3"></el-step>
+	</el-steps>
+	<el-button style="margin-top: 12px;" @click="next">下一步</el-button>
+	<h3>2.含状态步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal2}}</p>
+	<el-steps :space="200" :active="stepVal2" finish-status="success">
+	  <el-step title="已完成"></el-step>
+	  <el-step title="进行中"></el-step>
+	  <el-step title="步骤 3"></el-step>
+	</el-steps>
+	<h3>3.有描述的步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal3}}</p>
+	<el-steps :active="stepVal3">
+	  <el-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></el-step>
+	  <el-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></el-step>
+	  <el-step title="步骤 3" description="这段就没那么长了"></el-step>
+	</el-steps> -->
+	<!-- <h3>4.居中的步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal4}}</p> -->
+	<el-steps :active="stepVal4" align-center>
+	  <el-step title="下达评价通知" description="这是一段很长很长很长的描述性文字"></el-step>
+	  <el-step title="项目自评" description="这是一段很长很长很长的描述性文字"></el-step>
+	  <el-step title="撰写绩效评价报告" description="这是一段很长很长很长的描述性文字"></el-step>
+	  <el-step title="公布评价结果" description="这是一段很长很长很长的描述性文字"></el-step>
+	</el-steps>
+	<!-- <h3>5.带图标的步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal5}}</p>
+	<el-steps :active="stepVal5">
+	  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
+	  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
+	  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
+	</el-steps>
+	<h3>6.竖式步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal6}}</p>
+	<div style="height: 300px;">
+	  <el-steps direction="vertical" :active="stepVal6">
+		<el-step title="步骤 1"></el-step>
+		<el-step title="步骤 2"></el-step>
+		<el-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></el-step>
+	  </el-steps>
+	</div>
+	<h3>7.简洁风格的步骤条。</h3>
+	<p>active往里传值即可显示步骤、当前步骤：{{stepVal7}}</p>
+	<el-steps :active="stepVal7" simple>
+	  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
+	  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
+	  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
+	</el-steps>
+	
+	<el-steps :active="stepVal7" finish-status="success" simple style="margin-top: 20px">
+	  <el-step title="步骤 1" ></el-step>
+	  <el-step title="步骤 2" ></el-step>
+	  <el-step title="步骤 3" ></el-step>
+	</el-steps> -->
+</div>
+</body>
+<script type="text/javascript" src="https://demosc.chinaz.net/Files/DownLoad/webjs1/201712/jiaoben5564/js/vue.min.js" ></script>
+<script type="text/javascript" src="https://demosc.chinaz.net/Files/DownLoad/webjs1/201712/jiaoben5564/js/element.min.js" ></script>
+<script type="text/javascript">
+	new Vue({
+		el: '#myVue',
+		data: {
+			stepVal1: 0,
+			stepVal2: 2,
+			stepVal3: 3,
+			stepVal4: 4,
+			stepVal5: 1,
+			stepVal6: 2,
+			stepVal7: 3
+		},
+		methods: {
+			next() {
+				if (this.stepVal1++ > 2) this.stepVal1 = 0;
+			}
+		}
+	})
+</script>
+<style>
+
+  a{
+    
+  }
+  a::before{
+    content: '',
+    
+  }
+</style>
+</div>
+</html>
+
