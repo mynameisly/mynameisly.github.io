@@ -42,17 +42,16 @@
   }
   .videobox{
     width: 100%;
-    height: calc(100% - 45px);
+    height: calc(100% - 142px);
     position: absolute;
     left: 0;
     top: 20px;
-    bottom: 45px;
-    border:2px solid red;
+    border:2px solid blue;
     overflow: hidden;
   }
   .video{
     width: 100%;
-    height: 120%;
+    height: 114%;
     overflow: hidden;
   }
   .closeBtn{
@@ -148,7 +147,7 @@
       // 添加进入按钮
       var enterBtn = document.createElement('div');
       enterBtn.id = 'enter';
-      mask.appendChild(enterBtn);
+      videobox.appendChild(enterBtn);
       enterBtn.innerHTML = '进入';
       enterBtn.className = 'enterBtn';
       
